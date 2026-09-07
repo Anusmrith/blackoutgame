@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://ch7j6dem6cryo"]
+
+[ext_resource type="Script" uid="uid://ccb3f7vqndfg1" path="res://scripts/intro.gd" id="1_ioskq"]
+[ext_resource type="FontFile" uid="uid://cvk8cno0dixd4" path="res://assets/font/Super Mario Bros. NES.ttf" id="2_yjqpq"]
+
+[node name="Intro" type="Control" unique_id=1976112425]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ioskq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=794609839]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 637.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1460219287]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1155.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=373897196]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1129.0
+offset_bottom = 658.0
+
+[node name="Label" type="Label" parent="CenterContainer" unique_id=761230311]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_yjqpq")
+theme_override_font_sizes/font_size = 21
+text = "The city lost power...
+Only a few lamps remain.
+Stay in the light.
+Or...
+
+BLACK OUT."
+
+[node name="Timer" type="Timer" parent="." unique_id=1050980979]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Label2" type="Label" parent="." unique_id=168891783]
+layout_direction = 3
+layout_mode = 0
+offset_left = -618.0
+offset_top = 445.0
+offset_right = -394.0
+offset_bottom = 469.0
+text = "PLEASE WAIT.....GAME WILL STARTS!!!"
+vertical_alignment = 2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

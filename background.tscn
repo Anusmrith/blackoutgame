@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dlr45vlks4qwy"]
+
+[ext_resource type="Texture2D" uid="uid://cotn45n4tw52o" path="res://assets/environment/backgrounds/city 3/1.png" id="1_splo0"]
+[ext_resource type="Texture2D" uid="uid://bk2mjq5mb3bn5" path="res://assets/environment/backgrounds/city 3/2.png" id="2_eq6nc"]
+[ext_resource type="Texture2D" uid="uid://k0pdywvd26mp" path="res://assets/environment/backgrounds/city 3/3.png" id="3_bpugw"]
+[ext_resource type="Texture2D" uid="uid://0c3831wn4o38" path="res://assets/environment/backgrounds/city 3/4.png" id="4_gjjrj"]
+
+[node name="background" type="Node" unique_id=324884961]
+
+[node name="sky" type="Parallax2D" parent="." unique_id=837150903]
+z_index = -2
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="sky" unique_id=1398239866]
+position = Vector2(3, -66)
+texture = ExtResource("1_splo0")
+
+[node name="building1" type="Parallax2D" parent="." unique_id=1010287985]
+z_index = -2
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(576, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="building1" unique_id=1170739461]
+position = Vector2(6, -29)
+texture = ExtResource("2_eq6nc")
+
+[node name="buliding2" type="Parallax2D" parent="." unique_id=297116270]
+z_index = -2
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(576, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="buliding2" unique_id=1860456320]
+position = Vector2(0, -28)
+texture = ExtResource("3_bpugw")
+
+[node name="buliding3" type="Parallax2D" parent="." unique_id=2083175443]
+z_index = -2
+scroll_scale = Vector2(0.9, 0.9)
+repeat_size = Vector2(576, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="buliding3" unique_id=99813784]
+position = Vector2(12, -22)
+texture = ExtResource("4_gjjrj")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=44564725]

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cgndgjt4sq4i"]
+
+[ext_resource type="Script" uid="uid://wsqugp43v8va" path="res://scripts/lamp.gd" id="1_hxjgs"]
+[ext_resource type="Texture2D" uid="uid://btk3uuvfpbny" path="res://assets/environment/ChatGPT Image Aug 5, 2026, 09_58_26 PM.png" id="2_hxjgs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u5sy4"]
+radius = 124.57929
+
+[node name="Lamp" type="Area2D" unique_id=2108012596 groups=["player"]]
+script = ExtResource("1_hxjgs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=239912717]
+position = Vector2(484.25, -48.67845)
+scale = Vector2(0.09130858, 0.09677285)
+texture = ExtResource("2_hxjgs")
+region_rect = Rect2(0, 0, 1920, 720)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=368754688]
+position = Vector2(498, -56.000004)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("CircleShape2D_u5sy4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

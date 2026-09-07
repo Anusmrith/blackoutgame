@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://2brueyfr4un1"]
+
+[ext_resource type="Script" uid="uid://dcukgbx1c0154" path="res://scripts/death_menu.gd" id="1_8gjdn"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1596279337]
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=155427212]
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="DarknessOverlay" type="ColorRect" parent="." unique_id=1988415656]
+visible = false
+anchors_preset = -1
+offset_left = -14.0
+offset_right = 1138.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 1)
+
+[node name="DeathMenu" type="Control" parent="." unique_id=1849459763]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8gjdn")
+
+[node name="Label" type="Label" parent="DeathMenu" unique_id=1876695893]
+custom_minimum_size = Vector2(25, 60)
+layout_mode = 0
+offset_left = 183.0
+offset_top = 71.0
+offset_right = 1025.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 60
+text = "		YOU BLACKED OUT
+The darkness consumed you."
+
+[node name="Retry" type="Button" parent="DeathMenu" unique_id=771594460]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 322.0
+offset_right = 683.0
+offset_bottom = 384.0
+theme_override_font_sizes/font_size = 25
+text = "RETRY"
+
+[node name="MainMenu" type="Button" parent="DeathMenu" unique_id=582965820]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 405.0
+offset_right = 687.0
+offset_bottom = 470.0
+theme_override_font_sizes/font_size = 25
+text = "MAIN MENU"
+
+[connection signal="pressed" from="DeathMenu/Retry" to="DeathMenu" method="_on_retry_pressed"]
+[connection signal="pressed" from="DeathMenu/MainMenu" to="DeathMenu" method="_on_main_menu_pressed"]

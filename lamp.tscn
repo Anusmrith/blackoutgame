@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://imnf65pnst5k"]
+
+[ext_resource type="Script" uid="uid://wsqugp43v8va" path="res://scripts/lamp.gd" id="1_uno5e"]
+[ext_resource type="Texture2D" uid="uid://jpclvx0a180g" path="res://icon.svg" id="2_vxcd3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qfipa"]
+radius = 106.11786
+
+[node name="Lamp" type="Area2D" unique_id=291991725 groups=["player"]]
+script = ExtResource("1_uno5e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1045169211]
+position = Vector2(462, -56)
+scale = Vector2(0.671875, 0.6484375)
+texture = ExtResource("2_vxcd3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2001021957]
+position = Vector2(462, -56.000004)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("CircleShape2D_qfipa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
